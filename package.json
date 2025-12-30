@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Basic Node.js application using Express and MongoDB For Learning Docker",
   "main": "server.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
