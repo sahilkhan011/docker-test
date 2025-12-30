@@ -2,7 +2,7 @@
   "name": "node-mongo-app",
   "version": "1.0.0",
   "description": "Basic Node.js application using Express and MongoDB For Learning Docker",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node index.js",
