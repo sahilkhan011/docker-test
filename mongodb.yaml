@@ -1,11 +1,22 @@
 version: "3.9"
 
 services:
+  docker-app:
+    image: docker-test:1.0
+    container_name: my-app-container
+    ports:
+      - "5050:5050"
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URL: mongodb://root:secret@mongo:27017
+
   mongo:
     image: mongo
     container_name: mongo
-    ports:
-      - "27017:27017"
+    # ports:
+    #   - "27017:27017"
+    #  no need for port binding for it, because we are running app container inside compose stack
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: secret
