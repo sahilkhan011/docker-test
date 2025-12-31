@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 const PORT = 5050;
-const MONGO_URL = "mongodb://root:secret@localhost:27017";
+const MONGO_URL = process.env.MONGO_URL || "mongodb://root:secret@mongo:27017";
 const client = new MongoClient(MONGO_URL);
 const dbName = "test-db";
 
